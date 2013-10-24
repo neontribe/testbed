@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./bower_components/jasmine/lib/jasmine-core/jasmine.css">
+        <style>
+            iframe {
+                border: 0;
+                width: 550px;
+                height: 500px;
+                display: block;
+                margin:10px auto 0;
+                overflow: hidden;
+            }
+        </style>
+        <title>Jasmine w/ FuncUnit Test</title>
+    </head>
+    <body>
+        <script src='./bower_components/jquery/jquery.js'></script>
+        <script src='./bower_components/jasmine/lib/jasmine-core/jasmine.js'></script>
+        <script src='./bower_components/jasmine/lib/jasmine-core/jasmine-html.js'></script>
+        <script src='./bower_components/funcunit/dist/funcunit.js'></script>
+        <script src='./tests/example_jasmine.js'></script>
+        <script type="text/javascript">
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 1000;
+
+            var htmlReporter = new jasmine.HtmlReporter();
+
+            jasmineEnv.addReporter(htmlReporter);
+
+            jasmineEnv.specFilter = function(spec) {
+                return htmlReporter.specFilter(spec);
+            };
+
+            if(!/init/.test(window.location.search)) {
+                jasmineEnv.execute();
+            }
+        </script>
+    </body>
+</html>

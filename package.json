@@ -1,0 +1,38 @@
+{
+  "name": "testbed",
+  "description": "Skeleton integration for funcunit testing with testee and jasmine.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neontribe/testbed.git"
+  },
+  "bugs": {
+    "url": "git://github.com/neontribe/testbed.git"
+  },
+  "keywords": [
+    "funcunit",
+    "runner",
+    "js",
+    "javascript",
+    "testing",
+    "test",
+    "remote",
+    "execution"
+  ],
+  "author": {
+    "name": "Rupert Redington",
+    "email": "rupert@neontribe.co.uk"
+  },
+  "contributors": [],
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "~1.2.7",
+    "testee": "0.0.8"
+  },
+  "engines": {
+    "node": "~0.8 || ~0.10"
+  },
+  "version": "0.0.1",
+  "scripts": {
+    "test": "./node_modules/testee/bin/testee --browser phantom runner.html"
+  }
+}
