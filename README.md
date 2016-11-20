@@ -26,5 +26,5 @@ You can avoid having to path commands to testee by installing it globally with `
 See Also
 --------
 
-http://pivotal.github.io/jasmine/
+https://jasmine.github.io/
 http://daffl.github.io/testee.js/
